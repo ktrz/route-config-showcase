@@ -1,12 +1,16 @@
+<div><a routerLink="/example1">Go to example 1</a></div>
+
 <h2>Example 2</h2>
 
-<a
-  routerLink="first"
-  *tdRouteDataHas="'second'; propName: 'linkProp'; else: second"
-  >Go to first</a
->
+<div>
+  <a
+    routerLink="first"
+    *tdRouteDataHas="'second'; propName: 'linkProp'; else: second"
+    >Go to first</a
+  >
+</div>
 <ng-template #second>
-  <a routerLink="second">Go to second</a>
+  <div><a routerLink="second">Go to second</a></div>
 </ng-template>
 
 <router-outlet></router-outlet>
