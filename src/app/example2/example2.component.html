@@ -1,0 +1,12 @@
+<h2>Example 1</h2>
+
+<a
+  routerLink="first"
+  *tdRouteDataHas="'second'; propName: 'linkProp'; else: second"
+  >Go to first</a
+>
+<ng-template #second>
+  <a routerLink="second">Go to second</a>
+</ng-template>
+
+<router-outlet></router-outlet>
