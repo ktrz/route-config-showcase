@@ -16,6 +16,13 @@ import { RouterModule } from '@angular/router';
         path: '',
         children: [
           {
+            path: 'example1',
+            loadChildren: () =>
+              import('./example1/example1.module').then(
+                (m) => m.Example1Module
+              ),
+          },
+          {
             path: 'example2',
             loadChildren: () =>
               import('./example2/example2.module').then(
@@ -25,7 +32,7 @@ import { RouterModule } from '@angular/router';
           {
             path: '',
             pathMatch: 'full',
-            redirectTo: 'example2',
+            redirectTo: 'example1',
           },
         ],
       },

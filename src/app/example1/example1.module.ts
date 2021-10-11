@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { RouteConfigModule } from '@this-dot/route-config';
-import { Example2Component } from './example2.component';
+import { Example1Component } from './example.1.component';
 import { FirstComponent } from './first.component';
 import { SecondComponent } from './second.component';
 
@@ -13,20 +13,20 @@ import { SecondComponent } from './second.component';
     RouterModule.forChild([
       {
         path: '',
-        component: Example2Component,
+        component: Example1Component,
         children: [
           {
             path: 'first',
             component: FirstComponent,
             data: {
-              linkProp: ['first'],
+              title: ['Example 1 - first component'],
             },
           },
           {
             path: 'second',
             component: SecondComponent,
             data: {
-              linkProp: ['second'],
+              title: ['Example 1 - first component'],
             },
           },
           {
@@ -38,6 +38,6 @@ import { SecondComponent } from './second.component';
       },
     ]),
   ],
-  declarations: [Example2Component, FirstComponent, SecondComponent],
+  declarations: [Example1Component, FirstComponent, SecondComponent],
 })
-export class Example2Module {}
+export class Example1Module {}
